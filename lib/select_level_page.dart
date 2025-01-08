@@ -1,4 +1,3 @@
-
 import 'package:flame/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +43,8 @@ class _LevelPart extends StatelessWidget {
                 fit: StackFit.expand,
                 children: [
                   const Image(
-                    image: AssetImage('assets/images/stage/01/layers/l2_ground.png'),
+                    image: AssetImage(
+                        'assets/images/stage/01/layers/l2_ground.png'),
                     fit: BoxFit.cover,
                   ),
                   Positioned(
@@ -53,6 +53,7 @@ class _LevelPart extends StatelessWidget {
                     width: btnWidth,
                     height: btnHeight,
                     child: LevelButton(
+                      status: LevelStatus.threeStar,
                       fixedSize: Size(btnWidth, btnHeight),
                       onTap: () {},
                     ),
@@ -63,6 +64,7 @@ class _LevelPart extends StatelessWidget {
                     width: btnWidth,
                     height: btnHeight,
                     child: LevelButton(
+                      status: LevelStatus.twoStar,
                       fixedSize: Size(btnWidth, btnHeight),
                       onTap: () {},
                     ),
@@ -74,6 +76,7 @@ class _LevelPart extends StatelessWidget {
                     height: btnHeight,
                     child: Center(
                       child: LevelButton(
+                        status: LevelStatus.oneStar,
                         fixedSize: Size(btnWidth, btnHeight),
                         onTap: () {},
                       ),
@@ -85,6 +88,7 @@ class _LevelPart extends StatelessWidget {
                     width: btnWidth,
                     height: btnHeight,
                     child: LevelButton(
+                      status: LevelStatus.enable,
                       fixedSize: Size(btnWidth, btnHeight),
                       onTap: () {},
                     ),
@@ -95,6 +99,7 @@ class _LevelPart extends StatelessWidget {
                     width: btnWidth,
                     height: btnHeight,
                     child: LevelButton(
+                      status: LevelStatus.disable,
                       onTap: () {},
                       fixedSize: Size(btnWidth, btnHeight),
                     ),
@@ -138,41 +143,5 @@ class LevelButton extends StatelessWidget {
       height: fixedSize.height,
       label: SizedBox(),
     );
-    // return TextButton(
-    //   style: TextButton.styleFrom(
-    //     fixedSize: fixedSize,
-    //     padding: EdgeInsets.zero,
-    //     // enableFeedback: false,
-    //     splashFactory: NoSplash.splashFactory,
-    //     surfaceTintColor: Colors.transparent,
-    //     overlayColor: Colors.transparent,
-    //     shadowColor: Colors.transparent,
-    //     shape: const RoundedRectangleBorder(
-    //       borderRadius: BorderRadius.all(
-    //         Radius.circular(4),
-    //       ),
-    //     ),
-    //     backgroundBuilder: (context, states, _) {
-    //       final inkImage = Ink.image(fit: BoxFit.cover, image: image);
-    //       return TweenAnimationBuilder(
-    //           tween: Tween<double>(
-    //               begin: 0,
-    //               end: states.contains(WidgetState.pressed) ? 1.0 : 0.0),
-    //           duration: const Duration(milliseconds: 100),
-    //           child: inkImage,
-    //           builder: (context, anim, child) {
-    //             return SizedBox.expand(
-    //               child: Padding(
-    //                 padding: EdgeInsets.lerp(
-    //                     EdgeInsets.zero, const EdgeInsets.all(8), anim)!,
-    //                 child: Image,
-    //               ),
-    //             );
-    //           });
-    //     },
-    //   ),
-    //   onPressed: () {},
-    //   child: const SizedBox(),
-    // );
   }
 }

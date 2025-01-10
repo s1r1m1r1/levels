@@ -16,6 +16,7 @@ dependencies:
   flame: ^1.23.0
   meta: ^1.16.0
   collection: ^1.19.1
+  flame_fire_atlas: ^1.7.1
 
 dev_dependencies:
   flutter_test:
@@ -28,17 +29,10 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter packages.
 flutter:
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/stage/01/layers/
     - assets/images/stage/Parts/buttons/
@@ -47,6 +41,8 @@ flutter:
     - assets/images/layers/
     - assets/images/flame.png
     - assets/images/auras/001_fire/
+    - assets/images/vulkanos.fa
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:levels/select_level_page.dart';
+
+import 'flame_select_level_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SelectLevelPage(),
+      home: const FlameSelectLevelPage(),
+      // home: const SelectLevelPage(),
     );
   }
 }
